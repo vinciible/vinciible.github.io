@@ -1,0 +1,98 @@
+html body {
+  background-image: radial-gradient(ellipse at 20% 0%, color-mix(in srgb, var(--accent) 3%, transparent), transparent 55%);
+}
+
+.portfolio.about-container {
+  min-height: 0;
+  padding-bottom: 72px;
+}
+
+.about-container .portrait-placeholder {
+  aspect-ratio: auto;
+}
+
+.portrait-placeholder .portfolio-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.work-background {
+  position: relative;
+  isolation: isolate;
+}
+
+.work-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  clip-path: polygon(0 88px, 100% 0, 100% 100%, 0 100%);
+  background-color: var(--surface);
+}
+
+.portfolio.work-container {
+  min-height: 0;
+  padding-top: 136px;
+  padding-bottom: 100px;
+}
+
+.work-container .projects {
+  margin-top: 0;
+}
+
+.projects-grid .project-screenshot,
+.projects-grid .project-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1121 / 777;
+}
+
+.project-screenshot {
+  overflow: hidden;
+  border: 1px solid var(--accent);
+  background: var(--surface);
+}
+
+.project-screenshot-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-description {
+  margin-top: 16px;
+  max-width: 65ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.project-tools {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.project-tools strong {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .portfolio.about-container {
+    padding-bottom: 40px;
+  }
+
+  .work-background::before {
+    clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .portfolio.work-container {
+    padding-top: 80px;
+    padding-bottom: 64px;
+  }
+}

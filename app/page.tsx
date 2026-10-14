@@ -1,69 +1,81 @@
 import Image from "next/image";
+import SiteHeader from "./site-header";
+import Skills from "./skills";
+import "./section-background.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <SiteHeader />
+      <main>
+        <div className="portfolio about-container">
+          <section id="about" className="about" aria-labelledby="about-heading">
+            <div className="portrait-placeholder image-slot">
+              <Image
+                src="/images/portrait.jpg"
+                alt="Vincent Angeles"
+                width={1179}
+                height={1374}
+                unoptimized
+                sizes="(max-width: 640px) 280px, 360px"
+                className="portfolio-photo"
+              />
+            </div>
+
+            <div className="about-text">
+              <h2 id="about-heading">About me</h2>
+              <p>
+                I’m a Computer Science Undergrad and practicing programmer with IT professional experience. Interested in networking, cybersecurity 
+                and software development. Some of my personal hobbies include game development, hiking, traveling, piano, reading and film.
+                This is where I share my projects, what I’m learning, and the hobbies that keep me curious.
+              </p>
+            </div>
+          </section>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="work-background">
+          <div className="portfolio work-container">
+            <section id="projects" className="projects" aria-labelledby="projects-heading">
+              <h2 id="projects-heading">Projects</h2>
+              <div className="projects-grid">
+                <article className="project">
+                  <h3>Learning Desk</h3>
+                  <div className="project-screenshot">
+                    <Image
+                      src="/images/learning-desk.png"
+                      alt="Learning Desk dashboard showing learning tracks for Unity, Unreal Engine 5, piano, and Network+, with progress bars and next steps."
+                      width={1121}
+                      height={777}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1480px) 46vw, 660px"
+                      className="project-screenshot-image"
+                    />
+                  </div>
+                  <p className="project-description">
+                    A little desktop app to keep my learning organized. It tracks
+                    progress, weekly plans, and the next step for each hobby or
+                    skill, with everything saved on my computer.
+                  </p>
+                  <p className="project-tools">
+                    <strong>Tools used:</strong> C#, WPF/XAML, JSON, Visual Studio
+                  </p>
+                </article>
+
+                <article className="project">
+                  <h3>Project 2</h3>
+                  <div className="project-image-placeholder">
+                    [Coming soon]
+                  </div>
+                  <p className="project-description">[Coming soon]</p>
+                  <p className="project-tools">
+                    <strong>Tools used:</strong> Place holder
+                  </p>
+                </article>
+              </div>
+            </section>
+            <Skills />
+          </div>
         </div>
       </main>
-    </div>
+    </>
   );
 }
