@@ -48,6 +48,7 @@ export default function Home() {
                       height={777}
                       sizes="(max-width: 640px) 100vw, (max-width: 1480px) 46vw, 660px"
                       className="project-screenshot-image"
+                      unoptimized
                     />
                   </div>
                   <p className="project-description">
