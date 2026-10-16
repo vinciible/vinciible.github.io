@@ -70,7 +70,7 @@ export default function Home() {
                       width={2551}
                       height={1268}
                       sizes="(max-width: 640px) 100vw, (max-width: 1480px) 46vw, 660px"
-                      className="project-screenshot-image"
+                        className="project-screenshot-image project-screenshot-fill"
                       unoptimized
                     />
                   </div>
