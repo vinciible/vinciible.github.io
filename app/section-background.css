@@ -62,6 +62,11 @@ html body {
   object-fit: contain;
 }
 
+.project-screenshot-fill {
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-description {
   margin-top: 16px;
   max-width: 65ch;
