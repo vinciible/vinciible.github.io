@@ -63,7 +63,7 @@ export default function Home() {
 
                 <article className="project">
                   <h3>The Attic Computer</h3>
-                  <div className="project-screenshot">
+                  <div className="project-screenshot project-screenshot-wide">
                     <Image
                       src="/images/Project2Image.png"
                       alt="Chat showing research about dogs in a retro terminal-like interface."

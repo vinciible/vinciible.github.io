@@ -63,8 +63,18 @@ html body {
 }
 
 .project-screenshot-fill {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+}
+
+.projects-grid .project-screenshot-wide {
+  aspect-ratio: 2551 / 1268;
+}
+
+@media (min-width: 641px) {
+  .work-container .projects-grid {
+    grid-template-columns: minmax(0, 1.442728443fr) minmax(0, 2.011829653fr);
+  }
 }
 
 .project-description {
