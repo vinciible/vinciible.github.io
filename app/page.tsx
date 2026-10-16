@@ -79,7 +79,7 @@ export default function Home() {
                     This was inspired by the first vibe coder Courage the Cowardly Dog.
                   </p>
                   <p className="project-tools">
-                    <strong>Tools used:</strong> Place holder
+                    <strong>Tools used:</strong> JavaScript, HTML, CSS, Python, Visual Studio Code, LLM Studio, QWEN3 8B
                   </p>
                 </article>
               </div>
