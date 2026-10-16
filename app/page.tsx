@@ -63,12 +63,12 @@ export default function Home() {
 
                 <article className="project">
                   <h3>The Attic Computer</h3>
-                  <div className="project-image-placeholder">
+                  <div className="project-screenshot">
                     <Image
                       src="/images/Project2Image.png"
                       alt="Chat showing research about dogs in a retro terminal-like interface."
-                      width={1121}
-                      height={777}
+                      width={2551}
+                      height={1268}
                       sizes="(max-width: 640px) 100vw, (max-width: 1480px) 46vw, 660px"
                       className="project-screenshot-image"
                       unoptimized
