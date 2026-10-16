@@ -74,9 +74,9 @@ export default function Home() {
                       unoptimized
                     />
                   </div>
-                  <p className="project-description">Created a simple custom chatbot 
-                    that uses a local LLM "QWEN" and an interface built using Visual Studio
-                    HTML, CSS, JavaScript, and Python FastApi. 
+                  <p className="project-description">Built a chatbot powered by a local Qwen language model, with a 
+                    retro terminal-style interface using HTML, CSS, and JavaScript, backed by Python and FastAPI. 
+                    This was inspired by the first vibe coder Courage the Cowardly Dog.
                   </p>
                   <p className="project-tools">
                     <strong>Tools used:</strong> Place holder
