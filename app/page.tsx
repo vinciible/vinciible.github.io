@@ -65,7 +65,7 @@ export default function Home() {
                   <h3>The Attic Computer</h3>
                   <div className="project-image-placeholder">
                     <Image
-                      src="/images/Project1image.png"
+                      src="/images/Project2Image.png"
                       alt="Chat showing research about dogs in a retro terminal-like interface."
                       width={1121}
                       height={777}
