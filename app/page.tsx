@@ -62,11 +62,22 @@ export default function Home() {
                 </article>
 
                 <article className="project">
-                  <h3>Project 2</h3>
+                  <h3>The Attic Computer</h3>
                   <div className="project-image-placeholder">
-                    [Coming soon]
+                    <Image
+                      src="/images/Project1image.png"
+                      alt="Chat showing research about dogs in a retro terminal-like interface."
+                      width={1121}
+                      height={777}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1480px) 46vw, 660px"
+                      className="project-screenshot-image"
+                      unoptimized
+                    />
                   </div>
-                  <p className="project-description">[Coming soon]</p>
+                  <p className="project-description">Created a simple custom chatbot 
+                    that uses a local LLM "QWEN" and an interface built using Visual Studio
+                    HTML, CSS, JavaScript, and Python FastApi. 
+                  </p>
                   <p className="project-tools">
                     <strong>Tools used:</strong> Place holder
                   </p>
